@@ -1,0 +1,6 @@
+rootProject.name = 'cloud-native-demo'
+
+include 'gateway-service'
+include 'config-service'
+include 'registry-service'
+include 'demo-service'
