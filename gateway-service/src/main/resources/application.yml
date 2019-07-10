@@ -24,4 +24,6 @@ spring:
             - Path=/demo/**
           filters:
             - RewritePath=/demo/(?<segment>.*), /$\{segment}
-
+  sleuth:
+    sampler:
+      probability: 1.0
