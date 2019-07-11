@@ -1,5 +1,36 @@
 # cloud-native-demo
-Open the root folder in IntelliJ and it should create submodules automatically.
+Open the root folder in IntelliJ and it will create submodules automatically.
+
+## Open Tracing
+
+Let's talk a little bit about OpenTracing/OpenCensus concept.
+* Trace
+* Span
+
+>––|–––––––|–––––––|–––––––|–––––––|–––––––|–––––––|–––––––|–––––––> time\
+> [Trace 1......................................................]\
+> [Span A···················································]\
+>   [Span B··············································]\
+>      [Span D··········································]\
+>    [Span C········································]\
+>         [Span E·······]        [Span F··] [Span G··] [Span H··]
+
+## Let's review what demo application is doing.
+* Basic rest application with Spring data JPA
+* Demo the basic functiona. 
+
+### Add Slueth (OpenTracing/OpenCensus library)
+* Automatically instruments Rest Endpoint, AMQP.
+* Add logging, and it will maintain Spans
+* Programmatically add additional Spans (Or Traces)
+* Can be used across threads (and even across services in different container, more about that later)
+
+### Add Zipkin
+* This is more about sending the data to visualization tool endpoint
+* default is capture certain %, but we will override to capture everything.
+
+## Visualization tools
+I have used Zipkin & ES APM, but heard about Jaeger too. As per documentation, Splunk is also supported.
 
 ### Zipkin
 * Zipkin install and start: To start a zipkin in docker
@@ -12,3 +43,20 @@ Open the root folder in IntelliJ and it should create submodules automatically.
 * Jaeger URL: http://localhost:16686 
 
 **NOTE:** Run either Zipkin or Jaeger as i am configuring same port. It is not needed, just less config while doing the demo.
+
+## Tracing across services and containers
+
+## Gateway (Spring Cloud Gateway)
+* routing, authentication, authorization, load balancing (client side)
+* Zuul can also be used (from Netflix)
+
+## Service Registry (Eureka)
+* Register service by name
+* Remove services which are not working by status
+
+## Config Server
+* Manage configuration outside of the code
+* backend can be file system, git, Vault
+* Profile based configuration lookup
+* Auto Refresh, if we want
+
