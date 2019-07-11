@@ -60,3 +60,10 @@ I have used Zipkin & ES APM, but heard about Jaeger too. As per documentation, S
 * Profile based configuration lookup
 * Auto Refresh, if we want
 
+## Closing topic
+### ElasticSearch
+#### Application Performance Monitoring
+* Logstash/Fluentd
+* APM (directly send information or send via Logstash/Fluentd)
+* Logging to standard output! (controversial but thought provoking...)
+
