@@ -44,7 +44,7 @@ I have used Zipkin & ES APM, but heard about Jaeger too. As per documentation, S
 
 **NOTE:** Run either Zipkin or Jaeger as i am configuring same port. It is not needed, just less config while doing the demo.
 
-## Tracing across services and containers
+### Tracing across services and containers
 
 ## Gateway (Spring Cloud Gateway)
 * routing, authentication, authorization, load balancing (client side)
