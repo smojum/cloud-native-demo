@@ -1,5 +1,6 @@
 package com.landsend.demoservice.observability;
 
+import com.landsend.demoservice.MessageNotFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,7 +12,7 @@ import java.util.Optional;
 
 @RestController
 @Slf4j
-public class ObservabilityDemoServiceContoller {
+public class ObservabilityDemoContoller {
     @Autowired
     private ObservabilityDemoService service;
 
@@ -19,7 +20,11 @@ public class ObservabilityDemoServiceContoller {
     public ObservabilityDemo getMessage(@PathVariable("id") Long id) {
         log.info("getting data for id = " + id);
         Optional<ObservabilityDemo> response = service.getData(id);
-        return response.get();
+        if(response.isPresent()) {
+            return response.get();
+        } else {
+            throw new MessageNotFoundException();
+        }
     }
 
     @GetMapping("message")
