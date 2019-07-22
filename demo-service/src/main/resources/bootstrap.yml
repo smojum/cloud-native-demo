@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      token: s.0WELFK75fkhIsao8TfiI6LzP
+  application:
+    name: demo-service
+app:
+  foo: foo
+  bar: bar
+server:
+  port: 8081
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
