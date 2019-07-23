@@ -9,4 +9,6 @@ public class ConfigDemo {
     private Long id;
     private String foo;
     private String bar;
+    private String processName;
+    private Integer sleepFor;
 }

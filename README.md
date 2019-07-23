@@ -1,4 +1,47 @@
-# cloud-native-demo
+# 12 Factor App Development
+## I. Codebase
+One codebase tracked in revision control, many deploys
+* Configuration-as-a-Service
+## II. Dependencies
+Explicitly declare and isolate dependencies
+* Docker, Gradle, Maven, Containerization (Spring Boot)
+## III. Config
+Store config in the environment
+* Configuration-as-a-Service
+## IV. Backing services
+Treat backing services as attached resources
+* JDBC --> JPA --> JNDI --> JMS --> AMQP --> CMIS 
+## V. Build, release, run
+Strictly separate build and run stages
+* Configuration-as-a-Service
+## VI. Processes
+Execute the app as one or more stateless processes
+* Kubernetes, Service Registry, Service Gateway
+## VII. Port binding
+Export services via port binding
+* Kubernetes, Service Registry
+## VIII. Concurrency
+Scale out via the process model
+* Kubernetes, Service Registry
+## IX. Disposability
+Maximize robustness with fast startup and graceful shutdown
+* Micro-services
+## X. Dev/prod parity
+Keep development, staging, and production as similar as possible
+* Configuration-as-a-Service
+## XI. Logs
+Treat logs as event streams
+* Observability (OpenTracing/OpenCensus)
+## XII. Admin processes
+Run admin/management tasks as one-off processes
+
+# Moving to Cloud
+## Lift and shift
+* Funny Money V. Actual Cost
+* Expensive to Run
+
+# Design applications to be Cloud native (Demo)
+
 Open the root folder in IntelliJ and it will create submodules automatically.
 
 ## Open Tracing
@@ -17,7 +60,7 @@ Let's talk a little bit about OpenTracing/OpenCensus concept.
 
 ## Let's review what demo application is doing.
 * Basic rest application with Spring data JPA
-* Demo the basic functiona. 
+* Demo the basic functionality. 
 
 ### Add Slueth (OpenTracing/OpenCensus library)
 * Automatically instruments Rest Endpoint, AMQP.
