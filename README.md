@@ -52,11 +52,14 @@ Run admin/management tasks as one-off processes
 * Profile based configuration lookup
 * Auto Refresh, if we want
 
+
 ## Service Discovery
+![Service Registry](self-registration-diagram.png)
 * Eureka
 * Consul
 
 ## Service Gateway
+![Service Discovery and Service Gateway](service-gateway-discovery.png)
 * routing, authentication, authorization, load balancing (client side)
 * Spring Cloud Gateway (Reactive)
 * Zuul

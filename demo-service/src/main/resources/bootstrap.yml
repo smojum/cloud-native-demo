@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      token: s.FWzgDx5rBLtXTjKNKgTrsUPY
+      token: s.JltpLDSxGKMEeuY1TRpYrQ97
   application:
     name: demo-service
 app:
