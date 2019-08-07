@@ -1,5 +1,5 @@
 # 12 Factor App Development
-Folks from Heroku. (Now owned by Salesforce)
+Folks from Heroku wrote this. (Now owned by Salesforce)
 ## I. Codebase
 One codebase tracked in revision control, many deploys
 * Configuration-as-a-Service
@@ -21,6 +21,7 @@ Execute the app as one or more stateless processes
 ## VII. Port binding
 Export services via port binding
 * Kubernetes, Service Discovery
+* Avoid container determined port/micromanaging port
 ## VIII. Concurrency
 Scale out via the process model
 * Kubernetes, Service Discovery
@@ -33,19 +34,36 @@ Keep development, staging, and production as similar as possible
 ## XI. Logs
 Treat logs as event streams
 * Observability (OpenTracing/OpenCensus)
-## XII. Admin processes
+## XII. Admin processes *Not scope for this discussion*
 Run admin/management tasks as one-off processes
 
 # Moving to Cloud
 ## Lift and shift
+* Complex (not Complicated) to operate
+* Security (layers of security)
 * Funny Money V. Actual Cost
-* Expensive to Run
 
 # Design applications to be Cloud native (Demo)
 
-Open the root folder in IntelliJ and it will create submodules automatically.
+## Configuration as a service
+* Spring Config Server
+* Manage configuration outside of the code
+* backend can be file system, git, Vault
+* Profile based configuration lookup
+* Auto Refresh, if we want
 
-## Open Tracing
+## Service Discovery
+* Eureka
+* Consul
+
+## Service Gateway
+* routing, authentication, authorization, load balancing (client side)
+* Spring Cloud Gateway (Reactive)
+* Zuul
+* Consul
+* Ingress
+
+## Observability (OpenTracing)
 
 Let's talk a little bit about OpenTracing/OpenCensus concept.
 * Trace
@@ -90,24 +108,9 @@ I have used Zipkin & ES APM, but heard about Jaeger too. As per documentation, S
 
 ### Tracing across services and containers
 
-## Gateway (Spring Cloud Gateway)
-* routing, authentication, authorization, load balancing (client side)
-* Zuul can also be used (from Netflix)
-
-## Service Registry (Eureka)
-* Register service by name
-* Remove services which are not working by status
-
-## Config Server
-* Manage configuration outside of the code
-* backend can be file system, git, Vault
-* Profile based configuration lookup
-* Auto Refresh, if we want
-
 ## Closing topic
 ### ElasticSearch
 #### Application Performance Monitoring
 * Logstash/Fluentd
 * APM (directly send information or send via Logstash/Fluentd)
 * Logging to standard output! (controversial but thought provoking...)
-
