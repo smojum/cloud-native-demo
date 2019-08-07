@@ -46,6 +46,7 @@ Run admin/management tasks as one-off processes
 # Design applications to be Cloud native (Demo)
 
 ## Configuration as a service
+![Config Server](manage-distributed-configuration-and-secrets-with-spring-cloud-and-vault-spring-io-2017-10-638.jpg)
 * Spring Config Server
 * Manage configuration outside of the code
 * backend can be file system, git, Vault
@@ -57,7 +58,7 @@ Run admin/management tasks as one-off processes
 ![Service Registry](self-registration-diagram.png)
 * Eureka
 * Consul
-
+![Config Server with Eureka](config-server.png)
 ## Service Gateway
 ![Service Discovery and Service Gateway](service-gateway-discovery.png)
 * routing, authentication, authorization, load balancing (client side)
