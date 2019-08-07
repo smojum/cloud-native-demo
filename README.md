@@ -58,6 +58,7 @@ Run admin/management tasks as one-off processes
 ![Service Registry](self-registration-diagram.png)
 * Eureka
 * Consul
+
 ![Config Server with Eureka](config-server.png)
 ## Service Gateway
 ![Service Discovery and Service Gateway](service-gateway-discovery.png)
