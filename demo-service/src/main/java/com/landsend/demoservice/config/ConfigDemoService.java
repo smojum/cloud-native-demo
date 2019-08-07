@@ -10,7 +10,7 @@ public class ConfigDemoService {
 
     @Value("${app.foo}")
     private String foo;
-    public ConfigDemo getData(Long id) {
+    public ConfigDemo getData(Integer id) {
         return ConfigDemo.builder()
                 .id(id)
                 .foo(foo)

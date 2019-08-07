@@ -1,16 +1,17 @@
 # 12 Factor App Development
+Folks from Heroku. (Now owned by Salesforce)
 ## I. Codebase
 One codebase tracked in revision control, many deploys
 * Configuration-as-a-Service
 ## II. Dependencies
 Explicitly declare and isolate dependencies
-* Docker, Gradle, Maven, Containerization (Spring Boot)
+* VM, Docker, Ant, Gradle, Maven, Containerization...
 ## III. Config
 Store config in the environment
 * Configuration-as-a-Service
 ## IV. Backing services
 Treat backing services as attached resources
-* JDBC --> JPA --> JNDI --> JMS --> AMQP --> CMIS 
+* JDBC, JPA, AMQP, CMIS...
 ## V. Build, release, run
 Strictly separate build and run stages
 * Configuration-as-a-Service
@@ -19,13 +20,13 @@ Execute the app as one or more stateless processes
 * Kubernetes, Service Registry, Service Gateway
 ## VII. Port binding
 Export services via port binding
-* Kubernetes, Service Registry
+* Kubernetes, Service Discovery
 ## VIII. Concurrency
 Scale out via the process model
-* Kubernetes, Service Registry
+* Kubernetes, Service Discovery
 ## IX. Disposability
 Maximize robustness with fast startup and graceful shutdown
-* Micro-services
+* Faster Recovery from failure, Service Discovery
 ## X. Dev/prod parity
 Keep development, staging, and production as similar as possible
 * Configuration-as-a-Service

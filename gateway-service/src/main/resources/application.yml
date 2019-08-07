@@ -24,6 +24,14 @@ spring:
             - Path=/demo/**
           filters:
             - RewritePath=/demo/(?<segment>.*), /$\{segment}
+            - Hystrix=cb
+hystrix:
+  command:
+    cb:
+      execution:
+        isolation:
+          thread:
+            timeout-in-milliseconds: 5000
   sleuth:
     sampler:
       probability: 1.0

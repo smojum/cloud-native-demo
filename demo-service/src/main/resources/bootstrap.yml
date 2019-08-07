@@ -1,14 +1,14 @@
 spring:
   cloud:
     config:
-      token: s.0WELFK75fkhIsao8TfiI6LzP
+      token: s.FWzgDx5rBLtXTjKNKgTrsUPY
   application:
     name: demo-service
 app:
   foo: foo
   bar: bar
 server:
-  port: 0
+  port: 8081
 management:
   endpoints:
     web:
