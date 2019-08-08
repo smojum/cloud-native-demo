@@ -12,12 +12,12 @@ spring:
           uri: http://www.google.com
           predicates:
             - Path=/search
-            - After=2019-06-26T14:11:00.000-07:00[America/Denver]
+            - After=2019-08-08T18:00:00.000-07:00[America/Denver]
         - id: search
           uri: http://www.yahoo.com
           predicates:
             - Path=/search
-            - Before=2019-06-26T14:11:00.000-07:00[America/Denver]
+            - Before=2019-08-08T18:00:00.000-07:00[America/Denver]
         - id: demo
           uri: lb://demo-service
           predicates:
@@ -25,13 +25,25 @@ spring:
           filters:
             - RewritePath=/demo/(?<segment>.*), /$\{segment}
             - Hystrix=cb
-hystrix:
-  command:
-    cb:
-      execution:
-        isolation:
-          thread:
-            timeout-in-milliseconds: 5000
-  sleuth:
-    sampler:
-      probability: 1.0
+#hystrix:
+#  command:
+#    cb:
+#      execution:
+#        isolation:
+#          thread:
+#            timeout-in-milliseconds: 5000
+#  sleuth:
+#    sampler:
+#      probability: 1.0
+#
+#security:
+#  oauth2:
+#    client:
+#      clientId: bd1c0a783ccdd1c9b9e4
+#      clientSecret: 1a9030fbca47a5b2c28e92f19050bb77824b5ad1
+#      accessTokenUri: https://github.com/login/oauth/access_token
+#      userAuthorizationUri: https://github.com/login/oauth/authorize
+#      clientAuthenticationScheme: form
+#    resource:
+#      userInfoUri: https://api.github.com/user
+#      preferTokenInfo: false

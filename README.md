@@ -34,7 +34,7 @@ Keep development, staging, and production as similar as possible
 ## XI. Logs
 Treat logs as event streams
 * Observability (OpenTracing/OpenCensus)
-## XII. Admin processes *Not scope for this discussion*
+## XII. Admin processes ¯|_(ツ)_/¯
 Run admin/management tasks as one-off processes
 
 # Moving to Cloud
@@ -45,6 +45,12 @@ Run admin/management tasks as one-off processes
 
 # Design applications to be Cloud native (Demo)
 
+## Configuration
+* properties
+* yml
+* DRY
+* Is Configuration code?
+
 ## Configuration as a service
 ![Config Server](manage-distributed-configuration-and-secrets-with-spring-cloud-and-vault-spring-io-2017-10-638.jpg)
 * Spring Config Server
@@ -52,7 +58,6 @@ Run admin/management tasks as one-off processes
 * backend can be file system, git, Vault
 * Profile based configuration lookup
 * Auto Refresh, if we want
-
 
 ## Service Discovery
 ![Service Registry](self-registration-diagram.png)
