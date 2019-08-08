@@ -34,6 +34,7 @@ Keep development, staging, and production as similar as possible
 ## XI. Logs
 Treat logs as event streams
 * Observability (OpenTracing/OpenCensus)
+* Reduce cross cutting concerns
 ## XII. Admin processes ¯|_(ツ)_/¯
 Run admin/management tasks as one-off processes
 
@@ -48,8 +49,13 @@ Run admin/management tasks as one-off processes
 ## Configuration
 * properties
 * yml
+### How do you manage config
+* Environment Variable?
+* Template and different version is created at CICD pipeline
+* Part of code with different extension based on environment
+* Database
 * DRY
-* Is Configuration code?
+* Is Configuration code? application? service?
 
 ## Configuration as a service
 ![Config Server](manage-distributed-configuration-and-secrets-with-spring-cloud-and-vault-spring-io-2017-10-638.jpg)

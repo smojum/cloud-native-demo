@@ -24,7 +24,7 @@ spring:
             - Path=/demo/**
           filters:
             - RewritePath=/demo/(?<segment>.*), /$\{segment}
-            - Hystrix=cb
+#            - Hystrix=cb
 #hystrix:
 #  command:
 #    cb:
